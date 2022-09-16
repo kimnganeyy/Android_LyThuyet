@@ -19,9 +19,18 @@ public class MainActivity extends AppCompatActivity {
 
         clickme = findViewById(R.id.clickme);
         clickme.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+
+                Bundle bundle = new Bundle();
+                bundle.putString("ten", "Trần Thị Kim Ngân");
+                bundle.putString("masv", "2050531200236");
+
+                intent.putExtra("dulieu", bundle);
+
+
                 startActivity(intent);
             }
         });
