@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SignupActivity"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_marginLeft="20sp"
+    android:layout_marginRight="20sp"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to You"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/bungee"
+        android:layout_marginTop="-20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SignUp to start"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:background="@drawable/round_border"
+            android:inputType="text"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="UserName"
+            android:background="@drawable/round_border"
+            android:ems="15"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-Mail"
+            android:background="@drawable/round_border"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:inputType="number"
+            android:background="@drawable/round_border"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:background="@drawable/round_border"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonGo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GO"
+        android:backgroundTint="@color/black"
+        android:textColor="#fff"
+        android:layout_marginTop="20sp"/>
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? LogIn"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black" />
+
+</LinearLayout>
