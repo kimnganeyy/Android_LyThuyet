@@ -18,22 +18,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private ListView lvSinhVien244;
-    private List<SinhVien> sinhvienList244;
-    private SinhVienAdapter adapter244;
-    private SinhVienDao svDao244;
+    private ListView lvSinhVien236;
+    private List<SinhVien> sinhvienList236;
+    private SinhVienAdapter adapter236;
+    private SinhVienDao svDao236;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // anh xa
-        lvSinhVien244 = (ListView) findViewById(R.id.lv_sinhvien);
+        lvSinhVien236 = (ListView) findViewById(R.id.lv_sinhvien);
         // do du lieu
-        svDao244 = new SinhVienDao(MainActivity.this);
-        sinhvienList244 = svDao244.TatCaSinhVien244();
+        svDao236 = new SinhVienDao(MainActivity.this);
+        sinhvienList236 = svDao236.TatCaSinhVien236();
 //
-        adapter244 = new SinhVienAdapter(getApplicationContext(),sinhvienList244);
-        lvSinhVien244.setAdapter(adapter244);
+        adapter236 = new SinhVienAdapter(getApplicationContext(),sinhvienList236);
+        lvSinhVien236.setAdapter(adapter236);
     }
 
     @Override

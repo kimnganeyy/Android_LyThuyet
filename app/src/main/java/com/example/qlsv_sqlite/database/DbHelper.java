@@ -20,12 +20,12 @@ public class DbHelper extends SQLiteOpenHelper {
                 "DienThoai VARCHAR(200), " +
                 "Email VARCHAR(200))";
         sqLiteDatabase.execSQL(sqlSVCreate);
-        String SqlInsert4="INSERT INTO SinhVien(HoTen,GioiTinh,DienThoai,Email) VALUES('Trần Thị Kim Ngân','1','0836197328','2050531200236@sv.ute.udn.vn')";
-        String SqlInsert5="INSERT INTO SinhVien(HoTen,GioiTinh,DienThoai,Email) VALUES('Lê Anh Quốc','1','0123456789','2050531200262@sv.ute.udn.vn')";
-        String SqlInsert6="INSERT INTO SinhVien(HoTen,GioiTinh,DienThoai,Email) VALUES('Trần Đức Mạnh','0','0123456789','2050531200232@sv.ute.udn.vn')";
-        sqLiteDatabase.execSQL(SqlInsert4);
-        sqLiteDatabase.execSQL(SqlInsert5);
-        sqLiteDatabase.execSQL(SqlInsert6);
+        String SqlInsert1="INSERT INTO SinhVien(HoTen,GioiTinh,DienThoai,Email) VALUES('Trần Thị Kim Ngân','0','0836197328','2050531200236@sv.ute.udn.vn')";
+        String SqlInsert2="INSERT INTO SinhVien(HoTen,GioiTinh,DienThoai,Email) VALUES('Lê Anh Quốc','1','0123456789','2050531200262@sv.ute.udn.vn')";
+        String SqlInsert3="INSERT INTO SinhVien(HoTen,GioiTinh,DienThoai,Email) VALUES('Trần Đức Mạnh','1','0123456789','2050531200232@sv.ute.udn.vn')";
+        sqLiteDatabase.execSQL(SqlInsert1);
+        sqLiteDatabase.execSQL(SqlInsert2);
+        sqLiteDatabase.execSQL(SqlInsert3);
 
     }
 

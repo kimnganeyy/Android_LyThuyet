@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.qlsv_sqlite.R;
@@ -15,16 +14,16 @@ import com.example.qlsv_sqlite.model.SinhVien;
 import java.util.List;
 
 public class SinhVienAdapter extends BaseAdapter {
-    private List<SinhVien> sinhvienList244;
-    private Context context244;
-    public SinhVienAdapter(Context context244, List<SinhVien> listList244) {
-        this.context244 = context244;
-        this.sinhvienList244 = listList244;
+    private List<SinhVien> sinhvienList236;
+    private Context context236;
+    public SinhVienAdapter(Context context236, List<SinhVien> listList236) {
+        this.context236 = context236;
+        this.sinhvienList236 = listList236;
     }
 
     @Override
     public int getCount() {
-        return sinhvienList244.size();
+        return sinhvienList236.size();
     }
 
     @Override
@@ -39,42 +38,42 @@ public class SinhVienAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        ViewHolder viewHolder244;
+        ViewHolder viewHolder236;
         if (view == null)
         {
-            viewHolder244 = new ViewHolder();
+            viewHolder236 = new ViewHolder();
             //convert resource
-            LayoutInflater inflater = (LayoutInflater) context244.getSystemService(context244.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) context236.getSystemService(context236.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.view_item_sinhvien, null);
 
             //anh xa
-            viewHolder244.tvMaSV244 = view.findViewById(R.id.tv_masv);
-            viewHolder244.tvHoTen244 = view.findViewById(R.id.tv_hoten);
-            viewHolder244.tvDienThoai244 = view.findViewById(R.id.tv_sdt);
-            viewHolder244.tvEmail244 = view.findViewById(R.id.tv_email);
-            viewHolder244.ivGioiTinh244 = view.findViewById(R.id.iv_gioitinh);
+            viewHolder236.tvMaSV236 = view.findViewById(R.id.tv_masv);
+            viewHolder236.tvHoTen236 = view.findViewById(R.id.tv_hoten);
+            viewHolder236.tvDienThoai236 = view.findViewById(R.id.tv_sdt);
+            viewHolder236.tvEmail236 = view.findViewById(R.id.tv_email);
+            viewHolder236.ivGioiTinh236 = view.findViewById(R.id.iv_gioitinh);
 
-            view.setTag(viewHolder244);
+            view.setTag(viewHolder236);
         }
         else
         {
-            viewHolder244 = (ViewHolder) view.getTag();
+            viewHolder236 = (ViewHolder) view.getTag();
         }
 
         //
-        SinhVien sv244 = sinhvienList244.get(i);
-        viewHolder244.tvMaSV244.setText("Mã SV: " + sv244.getMaSV244());
-        viewHolder244.tvHoTen244.setText("Họ tên: " + sv244.getHoTen244());
-        viewHolder244.tvDienThoai244.setText("Điện thoại: " + sv244.getDienThoai244());
-        viewHolder244.tvEmail244.setText("Email: " + sv244.getEmail244());
-        if (sv244.getGioiTinh244() == 0)
+        SinhVien sv236 = sinhvienList236.get(i);
+        viewHolder236.tvMaSV236.setText("Mã SV: " + sv236.getMaSV236());
+        viewHolder236.tvHoTen236.setText("Họ tên: " + sv236.getHoTen236());
+        viewHolder236.tvDienThoai236.setText("Điện thoại: " + sv236.getDienThoai236());
+        viewHolder236.tvEmail236.setText("Email: " + sv236.getEmail236());
+        if (sv236.getGioiTinh236() == 0)
         {
-            viewHolder244.ivGioiTinh244.setImageResource(R.drawable.avatarnu);
+            viewHolder236.ivGioiTinh236.setImageResource(R.drawable.avatarnu);
         }
         else
         {
 
-            viewHolder244.ivGioiTinh244.setImageResource(R.drawable.gamer);
+            viewHolder236.ivGioiTinh236.setImageResource(R.drawable.gamer);
         }
 
         return view;
@@ -82,7 +81,7 @@ public class SinhVienAdapter extends BaseAdapter {
 
     class ViewHolder
     {
-        ImageView ivGioiTinh244;
-        TextView tvMaSV244, tvHoTen244, tvDienThoai244, tvEmail244;
+        ImageView ivGioiTinh236;
+        TextView tvMaSV236, tvHoTen236, tvDienThoai236, tvEmail236;
     }
 }
