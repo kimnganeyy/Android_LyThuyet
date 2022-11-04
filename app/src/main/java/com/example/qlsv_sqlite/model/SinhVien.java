@@ -1,6 +1,8 @@
 package com.example.qlsv_sqlite.model;
 
-public class SinhVien {
+import java.io.Serializable;
+
+public class SinhVien implements Serializable {
     private int MaSV236;
     private String HoTen236;
     private int GioiTinh236;

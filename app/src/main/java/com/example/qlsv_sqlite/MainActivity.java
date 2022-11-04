@@ -8,7 +8,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.qlsv_sqlite.adapter.SinhVienAdapter;
 import com.example.qlsv_sqlite.dao.SinhVienDao;
@@ -34,6 +37,20 @@ public class MainActivity extends AppCompatActivity {
 //
         adapter236 = new SinhVienAdapter(getApplicationContext(),sinhvienList236);
         lvSinhVien236.setAdapter(adapter236);
+
+        SuKien_ListView();
+    }
+
+    private void SuKien_ListView() {
+        lvSinhVien236.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                SinhVien sv236 = sinhvienList236.get(i);
+                Intent intent = new Intent(MainActivity.this, EditActivity.class);
+                intent.putExtra("DULIEU", sv236);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -55,5 +72,13 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
         return true;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        sinhvienList236.clear();
+        sinhvienList236.addAll(svDao236.TatCaSinhVien236());
+        adapter236.notifyDataSetChanged();
     }
 }

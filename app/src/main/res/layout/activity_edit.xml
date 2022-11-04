@@ -8,7 +8,7 @@
     android:padding="5dp"
     tools:context=".AddActivity">
     <TextView
-        android:text="THÊM SINH VIÊN"
+        android:text="CẬP NHẬP SINH VIÊN"
         android:textSize="20dp"
         android:gravity="center"
         android:layout_width="match_parent"
@@ -113,8 +113,8 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/btn_them"
-            android:text="Thêm sinh viên"
+            android:id="@+id/btn_luu"
+            android:text="Lưu"
             android:layout_marginHorizontal="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
